@@ -1,0 +1,226 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: azure;
+}
+.bienvenida_grid { 
+   
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.9fr 0.5fr 1fr 0.5fr 0.5fr 1fr;
+    gap: 5px 5px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "slider slider slider"
+      "bienvenida bienvenida video"
+      "serv1 serv2 serv3"
+      "galeria galeria calendario"
+      "publicidad publicidad publicidad"
+      "footer footer footer";
+  }
+  
+  .slider { grid-area: slider; }
+  
+  .serv1 { grid-area: serv1; 
+    padding: 2rem;
+  }
+  
+  .serv2 { grid-area: serv2; 
+    padding: 2rem;
+    display: flex;
+    align-self: center;
+  }
+  
+  .serv3 { grid-area: serv3; 
+    padding: 2rem;}
+  
+  .video { grid-area: video; 
+    padding: 2rem;}
+  
+  .bienvenida { grid-area: bienvenida; 
+    padding: 2rem;
+    margin-left: 5rem;
+    margin-right: 3rem;
+   
+  }
+  .btn-primary {
+    color: #fff;
+    background-color: #559987;
+    border-color: #559987;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #36584f;
+  border-color: #1c2825;
+}
+  .galeria {
+     grid-area: galeria; 
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: space-evenly;
+     padding: 2rem;
+    }
+    .galeria img {
+        width: 250px;
+        border: double 2px rgb(48, 62, 27);
+        opacity: .5;
+    
+    }
+
+   .galeria img:hover{
+      opacity: 1;
+      border: solid 2px rgb(161, 126, 126);
+  }
+  
+  .calendario { grid-area: calendario; 
+    padding: 2rem;
+  }
+  .calendario_fechas ol{
+    background-color: bisque;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    width: 500px;
+    height: 400px;
+    border: solid 2px black;
+   
+}
+.first-day{
+    grid-column-start: 5;
+   
+}
+.publicidad { grid-area: publicidad; 
+  padding: 2rem;
+}
+  
+  
+  html, body , .bienvenida_grid {
+    height: 100%;
+    margin: 0;
+  }
+.footer{
+  padding: 2rem;
+  grid-area: footer;
+
+}
+
+.bg-light {
+  background-color: #287171!important;
+
+}
+
+  /* For presentation only, no need to copy the code below
+  
+  .bienvenida_grid * {
+    border: 1px solid red;
+    position: relative;
+  }
+  
+  .bienvenida_grid *:after {
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+ */
+  .menu{
+    background-color: rgb(40, 113, 113);
+
+    
+}
+    .menu li{
+        display: inline-block;
+        text-align: center;
+        color: aliceblue;
+    }
+ 
+  
+    .menu li a {
+        
+        margin: 10px;
+        color: rgb(236, 236, 236);
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1rem;
+    }
+    .menu li a:hover {
+        background-color: rgb(164, 15, 15);
+        
+        margin: 10px;
+        color: rgb(253, 253, 253);
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    nav.navbar {
+      background-color:rgb(40, 113, 113);
+      
+  }
+  .navbar-light .navbar-nav .nav-link {
+    color: rgb(255, 255, 255);
+}
+    .footer{
+      padding: 20px;
+      background-color: rgb(40, 113, 113);
+      display: flex;
+      justify-content: space-between;
+      width: 100vw;
+      align-items: center;
+  }
+  
+  .footer_logo{
+      display: inline-block;
+      color: white;
+      font-size: 30px;
+      padding: 0 80px;
+      font-weight: 600;
+  }
+  .footer_title{
+      display: inline-block;
+      color: white;
+      text-align: center;
+  }
+  .footer_title p{
+      font-size: 13px;
+  }
+  .footer_rs{
+      display: inline-block;
+      padding: 20px;
+      font-size: 35px;
+  }
+
+  @media screen and (max-width:800px) {
+    .bienvenida_grid { 
+   
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.9fr 0.5fr 1fr 0.5fr 0.5fr 1fr;
+      gap: 5px 5px;
+      grid-auto-flow: row;
+      grid-template-areas:
+        "slider"
+        "bienvenida"
+        "video"
+        "serv1" 
+        "serv2" 
+        "serv3"
+        "galeria"
+        "calendario"
+        "publicidad"
+        "footer";
+    }
+    
+  }
